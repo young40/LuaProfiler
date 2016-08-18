@@ -1,6 +1,6 @@
 ###LuaProfiler使用说明
 
-LuaProfiler原自keplerproject（http://www.keplerproject.org/luaprofiler），原项目自2007.08之后停止更新了，所以我们把LuaProfiler源代码拿过来进行了一番修改，这里感谢作者。
+LuaProfiler原自[KeplerProject](http://www.keplerproject.org/luaprofiler)，原项目自2007.08之后停止更新了，所以我们把LuaProfiler源代码拿过来进行了一番修改，这里感谢作者。
 
 目前LuaProfiler已经可以支持Lua 5.3版本，经过测试已支持Android和iOS。对于Lua脚本的分析结果会生成一个JSON文件，然后通过解析JSON文件得到分析数据。
 
