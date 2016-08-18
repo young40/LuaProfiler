@@ -1,8 +1,8 @@
 ###LuaProfiler使用说明
 
-LuaProfiler原自keplerproject(http://www.keplerproject.org/luaprofiler)，原项目自2007.08之后停止更新了，所以我们把LuaProfiler源代码拿过来进行了一番修改，这里感谢作者。
+LuaProfiler原自keplerproject（http://www.keplerproject.org/luaprofiler），原项目自2007.08之后停止更新了，所以我们把LuaProfiler源代码拿过来进行了一番修改，这里感谢作者。
 
-目前LuaProfiler已经可以支持Lua 5.3版本，对于Lua脚本的分析结果会生成一个JSON文件，然后通过解析JSON文件得到分析数据。
+目前LuaProfiler已经可以支持Lua 5.3版本，经过测试已支持Android和iOS。对于Lua脚本的分析结果会生成一个JSON文件，然后通过解析JSON文件得到分析数据。
 
 ####使用方法
 1. 将LuaProfiler源代码集成到你的项目中的Lua源代码中，最终编译成dll/lib/so。
@@ -77,4 +77,12 @@ Return: bool, 是否成功
 **sub:** 子调用。  
 
 **说明：**  
-最终生成的JSON文件阅读性并不好，所以建议大家写一个工具解析成可读性比较好的格式。由于我是在Web上显示，所以我用了TableTree4J这个JS库去解析JSON文件
+1. 每个JSON文件最后会有：
+
+    {
+      "total_cs": 0.274,
+      "total_call": 6
+    }
+
+其中```total_cs```表示总耗时，```total_call```总调用次数。  
+2. 最终生成的JSON文件阅读性并不好，所以建议大家写一个工具解析成可读性比较好的格式。由于我是在Web上显示，所以我用了TableTree4J这个JS库去解析JSON文件。
